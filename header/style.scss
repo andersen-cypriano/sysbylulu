@@ -1,12 +1,12 @@
 #cabecalho {
   width: 100vw;
-  position: fixed!important;
+  position: fixed !important;
 }
 .content-top-bar {
   position: relative;
   background-color: var(--pink);
   .content-center {
-    padding: .5rem;
+    padding: 0.5rem;
     p {
       text-align: center;
       margin: 0;
@@ -15,6 +15,7 @@
       span {
         font-weight: 700;
       }
+
     }
     a {
       position: absolute;
@@ -26,9 +27,255 @@
       text-transform: uppercase;
       font-weight: 500;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: #000;
+      text-transform: uppercase;
+      span {
+        display: block;
+        background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/fale_conosco.svg") center center no-repeat;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
     }
   }
 }
-#cabecalho.fixed>.conteiner>.main-header {
-  position: relative;
+#cabecalho.fixed > .conteiner > .main-header {
+  position: relative !important;
+  left: auto !important;
+}
+
+div.main-header {
+  .conteudo-topo {
+    width: 33% !important;
+    justify-content: flex-start !important;
+    gap: 20px;
+    
+    ul.infos-menu {
+      display: none !important;
+    }
+    .btn-mini-menu {
+      width: 35px;
+      height: 20px;
+      background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg") center center no-repeat;
+      background-size:contain;
+      display: none;
+    }
+    
+    #form-buscar {
+      display: flex;
+      flex-direction: row-reverse;
+      input[type="search"] {
+        border: 0;
+        outline: none !important;
+        border-bottom: 1px solid var(--pink-light);
+        font-family: var(--main-font);
+        &:focus {
+          outline: none !important;
+        }
+      }
+      button {
+        padding: 0;
+        height: 40px;
+        width: 20px;
+        background: transparent;
+        color: var(--pink);
+        border-bottom: 1px solid var(--pink-light);
+      }
+    }
+    + div {
+      width: 33%;
+      h1 {
+        width: auto;
+        a {
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+  .conteudo-actions {
+    width: 33%;
+    justify-content: flex-end!important;
+    gap: 20px;
+    .btn-contact {
+      display: none;
+    }
+    ul.actions-menu {
+      width: auto!important;
+      .busca {
+        display: none !important;
+      }
+      li {
+        a {
+          width: 20px;
+          height: 20px;
+          i {
+            display: none;
+          }
+        }
+        &:nth-of-type(2) {
+          a {
+            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/favorite-nobg.svg") center center no-repeat;
+          }
+        }
+        &:nth-of-type(3) {
+          display: none;
+        }
+        &:nth-of-type(4) {
+          a {
+            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/entrar.svg")
+              center center no-repeat;
+          }
+        }
+        &:nth-of-type(5) {
+          display: none;
+        }
+      }
+      li.menu-carrinho {
+        .carrinho {
+          position: relative !important;
+          animation: none !important;
+          > a {
+            width: 20px;
+            height: 20px;
+            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/carrinho.svg")
+              center center no-repeat;
+            background-size: contain;
+            .qtd-carrinho {
+              display: block;
+              position: absolute !important;
+              top: -9px !important;
+              left: auto !important;
+              right: -10px !important;
+              min-width: 15px;
+              z-index: 1;
+              margin: auto;
+              padding: 4px 4px 1px 5px;
+              color: #fff;
+              font-size: 10px;
+              font-weight: 700;
+              line-height: 1;
+              box-sizing: border-box;
+              &:before {
+                background-color: #000 !important;
+              }
+            }
+          }
+        }
+        i {
+          color: var(--secundaria) !important;
+        }
+      }
+    }
+  }
+}
+#cabecalho.fixed > .conteiner > .main-header .carrinho > a .qtd-carrinho {
+  top: 7px !important;
+  .qtd-carrinho {
+    display: block;
+    position: absolute !important;
+    top: -9px !important;
+    left: auto !important;
+    right: -10px !important;
+    min-width: 15px;
+    z-index: 1;
+    margin: auto;
+    padding: 4px 4px 1px 5px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    box-sizing: border-box;
+    &:before {
+      background-color: #000 !important;
+    }
+  }
+}
+.menu.superior {
+  background: #FFF!important;
+  display: block;
+  ul.nivel-um {
+    justify-content: center!important;
+    li[class^="categoria-id-"] {
+      > a {
+        color: #000!important;
+        font-size: 14px!important;
+        strong {
+          text-transform: uppercase!important;
+        }
+      }
+    }
+    li.com-filho {
+      > a {
+        color: #000!important;
+        font-size: 14px!important;
+        strong {
+          text-transform: uppercase!important;
+        }
+      }
+    }
+  }
+}
+
+// MINI HEADER
+.mini-header {
+  .content-top-bar {
+    display: none;
+
+  }
+  .conteudo-topo {
+    .btn-mini-menu {
+      display: block!important;
+      cursor: pointer;
+    }
+    div.menu-hidden  {
+      display: none;
+    }
+    #form-buscar {
+    }
+  }
+  .logo {
+    a {
+      height: 60px;
+    }
+  }
+  .conteudo-actions {
+    .btn-contact {
+      display: flex!important;
+      align-items: center;
+      width: 50%;
+      justify-content: flex-end;
+      color: #000;
+      text-transform: uppercase;
+      span {
+        display: block;
+        background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/fale_conosco.svg") center center no-repeat;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;  
+      }
+    }
+  }
+  .menu-hidden {
+    display: none;
+  }
+}
+// MAIN BANNER
+.secao-banners {
+  .banner {
+    width: 100%!important;
+    max-width: 100%!important;
+    padding:0!important;
+    margin: 0!important;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-top-bar {
+    a {
+      display: none !important;
+    }
+  }
+
 }
