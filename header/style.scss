@@ -232,8 +232,6 @@ div.main-header {
     div.menu-hidden  {
       display: none;
     }
-    #form-buscar {
-    }
   }
   .logo {
     a {
@@ -272,10 +270,163 @@ div.main-header {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 227px;
+  }
+  #cabecalho {
+    &::before {
+      display: none!important;
+    }
+    .conteiner {
+      .main-header {
+        .conteudo-topo.span3.hidden-phone {
+          .menu-handler {
+            position: relative!important;
+            width: 35px;
+            height: 20px;
+            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg") center center no-repeat;
+            background-size:contain;
+            &::before {
+              display: none!important;
+            }
+          }
+        }
+        > .span6 {
+          h1.logo {
+            margin: 0 auto;
+          }
+        }
+        .busca {
+          width: 90%;
+          margin: 0;
+          > button {
+            display: none;
+          }
+          #form-buscar {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            input[type="search"] {
+              width: 100%;
+              border: 0;
+              outline: none !important;
+              border-bottom: 1px solid var(--pink-light);
+              font-family: var(--main-font);
+              &:focus {
+                outline: none !important;
+              }
+            }
+            button {
+              position: relative!important;
+              padding: 0;
+              height: 40px;
+              width: 10%;
+              background: transparent;
+              color: var(--pink);
+              border-bottom: 1px solid var(--pink-light);
+            }
+          }
+        }
+        .conteudo-actions {
+          width: 90%!important;
+          margin: 0 auto;
+          display: flex!important;
+          justify-content: space-between!important;
+          button.menu-handler {
+            position: relative!important;
+            width: 32px!important;
+            &::before {
+              content: '';
+              width: 32px!important;
+              height: 32px!important;
+              background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg") center center no-repeat;
+            }
+          }
+          ul.actions-menu {
+            display: flex!important;
+            gap: 20px;
+            padding: 0;
+            justify-content: center!important;
+            li {
+              max-width: 20px;
+            }
+            li.visible-phone {
+              display: none!important;
+            }
+            li.menu-carrinho {
+              position: relative;
+              .carrinho {
+                a {
+                  width: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // MINI HEADER MOBILE
+    .mini-header-mobile {
+      display: flex;
+      flex-direction: row!important;
+      .content-top-bar {
+        display: none;
+      }
+      .conteudo-topo.span3.hidden-phone {
+        width:33%!important;
+        display: block!important;
+        min-height: auto!important;
+        .menu-handler {
+          display: block!important;
+          position: relative!important;
+          &::before {
+            content: '';
+            width: 20px!important;
+            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg") center center no-repeat;
+          }
+        }
+      }
+      .busca {
+        display: none;
+      }
+      .span6 {
+        width: 33%!important;
+        h1 {
+          width: 100%!important;
+          padding: 0!important;
+          a {
+            display: block;
+            height: auto;
+            img {
+              position: relative;
+              margin: .5rem 0;
+            }
+          }
+        }
+      }
+      nav.conteudo-topo.span3.conteudo-actions {
+        width:33%!important;
+        max-width: 33%!important;
+        justify-content: flex-end!important;
+        .menu-handler {
+          display: none!important;
+        }
+        .actions-menu {
+          gap: 10px!important;
+        }
+      }
+    }
+  }
+  ul.ui-widget-content {
+    width: 83%!important;
+    top: 185px!important;
+    left: 0px!important;
+  }
   .content-top-bar {
     a {
       display: none !important;
     }
   }
+  
 
 }
