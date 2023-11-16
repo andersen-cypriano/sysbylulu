@@ -66,32 +66,45 @@ const cabecalho = {
   },
   // MOBILE
   cloneButtonsMobile: () => {
-    document.querySelector('.conteudo-actions').prepend(document.querySelector('.menu-handler'));
+    document
+      .querySelector(".conteudo-actions")
+      .prepend(document.querySelector(".menu-handler"));
 
-    const contentSearch = document.querySelector('.busca');
-    contentSearch.classList.add('content-search-mobile');
-    document.querySelector('.main-header > .span6').after(contentSearch);
+    const contentSearch = document.querySelector(".busca");
+    contentSearch.classList.add("content-search-mobile");
+    document.querySelector(".main-header > .span6").after(contentSearch);
 
     // MINI HEADER
-    const btnMenuMini = document.querySelector('.menu-handler').cloneNode(true);
-    btnMenuMini.addEventListener('click',()=>{
-      document.querySelector('nav button').click()
+    const btnMenuMini = document.querySelector(".menu-handler").cloneNode(true);
+    btnMenuMini.addEventListener("click", () => {
+      document.querySelector("nav button").click();
+    });
+    
+    document
+    .querySelector(".conteudo-topo.span3.hidden-phone")
+    .appendChild(btnMenuMini);
+    
+    const btnSearch = document.querySelector(".toggle-search").cloneNode(true);
+    btnSearch.addEventListener('click', ()=> {
+       document.querySelector('.content-search-mobile').classList.toggle('content-search-mobile-show')
     })
-
-    document.querySelector('.conteudo-topo.span3.hidden-phone').appendChild(btnMenuMini)
-
+    document
+      .querySelector(".conteudo-topo.span3.hidden-phone")
+      .appendChild(btnSearch);
   },
   miniHeaderMobile: () => {
-    function setMiniHeaderMobile () {
-      document.querySelector('.main-header').classList.add('mini-header-mobile');
-      document.querySelector('.content-top-bar').style.display = 'none';
-      
-
+    function setMiniHeaderMobile() {
+      document
+        .querySelector(".main-header")
+        .classList.add("mini-header-mobile");
+      document.querySelector(".content-top-bar").style.display = "none";
     }
 
-    function removeMiniHeaderMobile () {
-      document.querySelector('.main-header').classList.remove('mini-header-mobile');
-      document.querySelector('.content-top-bar').style.display = 'block';
+    function removeMiniHeaderMobile() {
+      document
+        .querySelector(".main-header")
+        .classList.remove("mini-header-mobile");
+      document.querySelector(".content-top-bar").style.display = "block";
     }
 
     window.addEventListener("scroll", () => {
@@ -102,9 +115,72 @@ const cabecalho = {
     this.createTopBar();
     this.cloneButtonsMobile();
     this.miniHeaderMobile();
-  }
+  },
 };
 
+
+const newsletter = {
+  subtitle: () => {
+
+    const subtitleNews = document.createElement('p');
+    subtitleNews.textContent = 'Não se preocupe, também não gostamos de Spam!';
+    
+    document.querySelector('#barraNewsletter .newsletter-cadastro.input-conteiner').after(subtitleNews)
+    
+  },
+  init: function () {
+    this.subtitle();
+  }
+}
+
+const sliders = {
+  miniBanner: () => {
+    document.querySelector('.mini-banner #smarthint-home-position3').remove();
+    document.querySelector('.mini-banner #blank-home-position3').remove();
+    $('.row-fluid.banner.mini-banner.hidden-phone').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      
+    });
+  },
+  init: function () {
+    this.miniBanner();
+  }
+}
+
+
+const rodape = {
+  moveContents: ()=> {
+    document.querySelector('#rodape .conteiner .row-fluid .row-fluid').prepend(document.querySelector('.contact-data'))
+    document.querySelector('#rodape .contact-data').appendChild(document.querySelector('.lista-redes'))
+
+    document.querySelector('.sobre-loja-rodape').prepend(document.querySelector('h1.logo').cloneNode(true))
+
+    document.querySelector('.pagamento-selos + div .row-fluid div:nth-of-type(2)').appendChild(document.querySelector('.logo-mt'))
+    document.querySelector('.pagamento-selos + div .row-fluid div:nth-of-type(2)').removeAttribute('style')
+  },
+  init: function () {
+    this.moveContents();
+  }
+}
+
+function isDesktop () {
+  cabecalho.initDesktop();
+}
+function isMobile () {
+  cabecalho.initMobile();
+  // sliders.init();
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".main-header") !== null &&  window.matchMedia("(max-width: 700px)").matches == false ? cabecalho.initDesktop() : cabecalho.initMobile();
+  document.querySelector(".main-header") !== null &&
+  window.matchMedia("(max-width: 700px)").matches == false
+    ? isDesktop ()
+    : isMobile();
+
+    // HOME
+    document.querySelector('#barraNewsletter') ? newsletter.init() : null;
+
+    document.querySelector('#rodape') ? rodape.init() : null;
 });

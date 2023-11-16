@@ -1,0 +1,186 @@
+#rodape {
+  .institucional {
+    background: var(--brown)!important;
+    padding: 20px 0;
+    .conteiner {
+      .row-fluid {
+        > .span9 {
+          width: 100%!important;
+          min-width: 100%!important;
+        }
+        .row-fluid {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          &::before {
+            display: none!important;
+          }
+          &::after {
+            display: none!important;
+          }
+          .titulo {
+            margin: 0;
+            padding: 0;
+            font-family: var(--main-font);
+            font-size: 20px;
+            margin-bottom: 16px!important;
+          }
+          .sobre-loja-rodape {
+            .lista-redes {
+              display: none;
+            }
+            .logo {
+              height: 80px;
+              img {
+                position: relative;
+                height: 80px
+              }
+            }
+            .titulo {
+              display: none;
+            }
+          }
+          .links-rodape-paginas {
+            padding-top: 50px;
+          }
+          .contact-data {
+            padding-top: 50px;
+            .lista-redes {
+              display: block!important;
+              ul {
+                li {
+                  i {
+                    background: transparent;
+                  }
+                  &:nth-of-type(1) {
+                    display: none;
+                  }
+                  &:nth-of-type(2) {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+          .links-rodape-categorias {
+            display: none;
+          }
+
+        }
+      }
+    }
+  }
+  .pagamento {
+    display: none;
+  }
+  .pagamento-selos {
+    padding: 30px 0;
+    + div {
+
+      .conteiner {
+        .row-fluid {
+          p {
+            color: var(--brown)!important;
+          }
+          div:nth-of-type(2) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  .selos {
+    display: flex;
+    gap: 30px;
+    .titulo {
+      color: var(--brown);
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  #rodape {
+    .institucional {
+      background: var(--brown)!important;
+      padding: 20px 0;
+      .conteiner {
+        .row-fluid {
+          
+          > .span9 {
+            width: 100%!important;
+            min-width: 100%!important;
+           
+          }
+          .row-fluid {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            &::before {
+              display: none!important;
+            }
+            &::after {
+              display: none!important;
+            }
+            .titulo {
+              margin: 0;
+              padding: 0;
+              font-family: var(--main-font);
+              font-size: 20px;
+              margin-bottom: 16px!important;
+            }
+            .sobre-loja-rodape {
+              .lista-redes {
+                display: none;
+              }
+              .logo {
+                height: 80px;
+                img {
+                  position: relative;
+                  height: 80px
+                }
+              }
+              .titulo {
+                display: none;
+              }
+            }
+            .links-rodape-paginas {
+              padding-top: 50px;
+            }
+            .contact-data {
+              padding-top: 50px;
+              .lista-redes {
+                display: block!important;
+                ul {
+                  li {
+                    i {
+                      background: transparent;
+                    }
+                    &:nth-of-type(1) {
+                      display: none;
+                    }
+                    &:nth-of-type(2) {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+            .links-rodape-categorias {
+              display: none;
+            }
+  
+          }
+        }
+      }
+    }
+  }
+  .selos {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+}

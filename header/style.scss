@@ -15,7 +15,6 @@
       span {
         font-weight: 700;
       }
-
     }
     a {
       position: absolute;
@@ -33,7 +32,8 @@
       text-transform: uppercase;
       span {
         display: block;
-        background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/fale_conosco.svg") center center no-repeat;
+        background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/fale_conosco.svg")
+          center center no-repeat;
         width: 20px;
         height: 20px;
         margin-right: 5px;
@@ -51,18 +51,19 @@ div.main-header {
     width: 33% !important;
     justify-content: flex-start !important;
     gap: 20px;
-    
+
     ul.infos-menu {
       display: none !important;
     }
     .btn-mini-menu {
       width: 35px;
       height: 20px;
-      background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg") center center no-repeat;
-      background-size:contain;
+      background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg")
+        center center no-repeat;
+      background-size: contain;
       display: none;
     }
-    
+
     #form-buscar {
       display: flex;
       flex-direction: row-reverse;
@@ -96,13 +97,13 @@ div.main-header {
   }
   .conteudo-actions {
     width: 33%;
-    justify-content: flex-end!important;
+    justify-content: flex-end !important;
     gap: 20px;
     .btn-contact {
       display: none;
     }
     ul.actions-menu {
-      width: auto!important;
+      width: auto !important;
       .busca {
         display: none !important;
       }
@@ -116,7 +117,8 @@ div.main-header {
         }
         &:nth-of-type(2) {
           a {
-            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/favorite-nobg.svg") center center no-repeat;
+            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/favorite-nobg.svg")
+              center center no-repeat;
           }
         }
         &:nth-of-type(3) {
@@ -130,6 +132,12 @@ div.main-header {
         }
         &:nth-of-type(5) {
           display: none;
+        }
+        .submenu {
+          background: var(--pink)!important;
+          &::after {
+            border-bottom-color: var(--pink)!important;
+          }
         }
       }
       li.menu-carrinho {
@@ -193,25 +201,25 @@ div.main-header {
   }
 }
 .menu.superior {
-  background: #FFF!important;
+  background: #fff !important;
   display: block;
   ul.nivel-um {
-    justify-content: center!important;
+    justify-content: center !important;
     li[class^="categoria-id-"] {
       > a {
-        color: #000!important;
-        font-size: 14px!important;
+        color: #000 !important;
+        font-size: 14px !important;
         strong {
-          text-transform: uppercase!important;
+          text-transform: uppercase !important;
         }
       }
     }
     li.com-filho {
       > a {
-        color: #000!important;
-        font-size: 14px!important;
+        color: #000 !important;
+        font-size: 14px !important;
         strong {
-          text-transform: uppercase!important;
+          text-transform: uppercase !important;
         }
       }
     }
@@ -222,14 +230,13 @@ div.main-header {
 .mini-header {
   .content-top-bar {
     display: none;
-
   }
   .conteudo-topo {
     .btn-mini-menu {
-      display: block!important;
+      display: block !important;
       cursor: pointer;
     }
-    div.menu-hidden  {
+    div.menu-hidden {
       display: none;
     }
   }
@@ -240,7 +247,7 @@ div.main-header {
   }
   .conteudo-actions {
     .btn-contact {
-      display: flex!important;
+      display: flex !important;
       align-items: center;
       width: 50%;
       justify-content: flex-end;
@@ -248,10 +255,11 @@ div.main-header {
       text-transform: uppercase;
       span {
         display: block;
-        background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/fale_conosco.svg") center center no-repeat;
+        background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/fale_conosco.svg")
+          center center no-repeat;
         width: 20px;
         height: 20px;
-        margin-right: 5px;  
+        margin-right: 5px;
       }
     }
   }
@@ -262,12 +270,85 @@ div.main-header {
 // MAIN BANNER
 .secao-banners {
   .banner {
-    width: 100%!important;
-    max-width: 100%!important;
-    padding:0!important;
-    margin: 0!important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }
+#corpo {
+  > .conteiner {
+    padding-top: 0;
+  }
+}
+
+.mini-banner {
+  max-width: 100% !important;
+  padding: 70px 20px;
+  background-color: var(--pink);
+}
+
+#listagemProdutos {
+  position: relative;
+  .titulo-categoria {
+    font-family: var(--secundary-font);
+    text-align: center;
+    color: var(--brown) !important;
+    font-size: 45px !important;
+    margin-top: 0 !important;
+    &:nth-of-type(1) {
+      margin-top: -29px !important;
+    }
+  }
+  .listagem-linha {
+    .listagem-item {
+      .imagem-produto {
+      }
+      .info-produto {
+        a.nome-produto {
+          text-align: center;
+          color: #131313;
+          font-size: 16px;
+          padding: 0;
+          margin: 0 0 16px 0;
+          min-height: auto;
+        }
+        .preco-produto {
+          flex-direction: column !important;
+          > div {
+            text-align: center;
+            &:nth-of-type(1) {
+              span,
+              strong {
+                font-size: 12px !important;
+                color: #131313 !important;
+              }
+            }
+            &:nth-of-type(2) {
+              strong {
+                font-size: 20px !important;
+                color: #131313 !important;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+      .acoes-produto {
+        a.botao-comprar {
+          top: calc(100% - 50px);
+          background: var(--brown) !important;
+          padding: 5px 40px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
 
 @media (max-width: 768px) {
   body {
@@ -275,19 +356,20 @@ div.main-header {
   }
   #cabecalho {
     &::before {
-      display: none!important;
+      display: none !important;
     }
     .conteiner {
       .main-header {
         .conteudo-topo.span3.hidden-phone {
           .menu-handler {
-            position: relative!important;
+            position: relative !important;
             width: 35px;
             height: 20px;
-            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg") center center no-repeat;
-            background-size:contain;
+            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg")
+              center center no-repeat;
+            background-size: contain;
             &::before {
-              display: none!important;
+              display: none !important;
             }
           }
         }
@@ -317,7 +399,7 @@ div.main-header {
               }
             }
             button {
-              position: relative!important;
+              position: relative !important;
               padding: 0;
               height: 40px;
               width: 10%;
@@ -328,36 +410,41 @@ div.main-header {
           }
         }
         .conteudo-actions {
-          width: 90%!important;
+          width: 90% !important;
           margin: 0 auto;
-          display: flex!important;
-          justify-content: space-between!important;
+          display: flex !important;
+          justify-content: space-between !important;
           button.menu-handler {
-            position: relative!important;
-            width: 32px!important;
+            position: relative !important;
+            width: 32px !important;
             &::before {
-              content: '';
-              width: 32px!important;
-              height: 32px!important;
-              background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg") center center no-repeat;
+              content: "";
+              width: 32px !important;
+              height: 32px !important;
+              background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg")
+                center center no-repeat;
             }
           }
           ul.actions-menu {
-            display: flex!important;
+            display: flex !important;
             gap: 20px;
             padding: 0;
-            justify-content: center!important;
+            justify-content: center !important;
             li {
               max-width: 20px;
             }
             li.visible-phone {
-              display: none!important;
+              display: none !important;
             }
             li.menu-carrinho {
               position: relative;
               .carrinho {
                 a {
                   width: 20px;
+                  .qtd-carrinho {
+                    top: 7px !important;
+                    color: #fff !important;
+                  }
                 }
               }
             }
@@ -368,21 +455,35 @@ div.main-header {
     // MINI HEADER MOBILE
     .mini-header-mobile {
       display: flex;
-      flex-direction: row!important;
+      flex-direction: row !important;
+      background-color: var(--pink);
       .content-top-bar {
         display: none;
       }
       .conteudo-topo.span3.hidden-phone {
-        width:33%!important;
-        display: block!important;
-        min-height: auto!important;
+        width: 33% !important;
+        display: flex !important;
+        align-items: center;
+        min-height: auto !important;
+        gap: 20px;
         .menu-handler {
-          display: block!important;
-          position: relative!important;
+          display: block !important;
+          position: relative !important;
           &::before {
-            content: '';
-            width: 20px!important;
-            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg") center center no-repeat;
+            content: "";
+            width: 20px !important;
+            background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/menu.svg")
+              center center no-repeat;
+          }
+        }
+        .toggle-search {
+          width: 20px !important;
+          height: 20px !important;
+          background: transparent
+            url("https://cdn.awsli.com.br/2444/2444356/arquivos/lupa.svg")
+            center center no-repeat;
+          i {
+            display: none;
           }
         }
       }
@@ -390,43 +491,73 @@ div.main-header {
         display: none;
       }
       .span6 {
-        width: 33%!important;
+        width: 33% !important;
         h1 {
-          width: 100%!important;
-          padding: 0!important;
+          width: 100% !important;
+          padding: 0 !important;
           a {
             display: block;
             height: auto;
             img {
               position: relative;
-              margin: .5rem 0;
+              margin: 0.5rem 0;
             }
           }
         }
       }
+      .content-search-mobile {
+        position: fixed;
+        top: 74px;
+        width: 100% !important;
+        background: #fff;
+        left: 0;
+        display: none;
+      }
+      .content-search-mobile-show {
+        display: block !important;
+      }
       nav.conteudo-topo.span3.conteudo-actions {
-        width:33%!important;
-        max-width: 33%!important;
-        justify-content: flex-end!important;
+        width: 33% !important;
+        max-width: 33% !important;
+        justify-content: flex-end !important;
         .menu-handler {
-          display: none!important;
+          display: none !important;
         }
         .actions-menu {
-          gap: 10px!important;
+          gap: 10px !important;
         }
       }
     }
   }
   ul.ui-widget-content {
-    width: 83%!important;
-    top: 185px!important;
-    left: 0px!important;
+    width: 83% !important;
+    top: 185px !important;
+    left: 0px !important;
   }
   .content-top-bar {
     a {
       display: none !important;
     }
   }
-  
 
+  .mini-banner {
+    display: block !important;
+    padding: 10px 10px 40px 10px !important;
+    .modulo {
+      margin: 0 !important;
+      padding: 10px;
+    }
+    .smarthint-home-position3,
+    .blank-home-position3 {
+      display: none;
+    }
+  }
+
+  #listagemProdutos {
+    .titulo-categoria {
+      &:nth-of-type(1) {
+        // margin-top: 20px!important;
+      }
+    }
+  }
 }
