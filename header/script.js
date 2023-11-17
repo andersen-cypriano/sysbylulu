@@ -111,10 +111,26 @@ const cabecalho = {
       window.scrollY > 0 ? setMiniHeaderMobile() : removeMiniHeaderMobile();
     });
   },
+  mainMenu: () => {
+    document.querySelectorAll('.com-filho > a').forEach(element => {
+      element.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('.show-menu-dois').forEach(element => {
+          element.classList.remove('show-menu-dois')
+        })
+        document.querySelectorAll('.opened').forEach(element => {
+          element.classList.remove('opened')
+        })
+        element.parentElement.classList.toggle('opened')
+        element.nextElementSibling.classList.toggle('show-menu-dois')
+      })
+    })
+  },
   initMobile: function () {
     this.createTopBar();
     this.cloneButtonsMobile();
     this.miniHeaderMobile();
+    this.mainMenu();
   },
 };
 
