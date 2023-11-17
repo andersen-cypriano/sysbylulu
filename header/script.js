@@ -125,6 +125,12 @@ const cabecalho = {
         element.nextElementSibling.classList.toggle('show-menu-dois')
       })
     })
+
+    // create top menu
+    const topMenu = document.createElement('p');
+    topMenu.classList.add('top-menu');
+    topMenu.textContent = 'MENU';
+    document.querySelector('.menu').prepend(topMenu)
   },
   initMobile: function () {
     this.createTopBar();
@@ -144,8 +150,15 @@ const newsletter = {
     document.querySelector('#barraNewsletter .newsletter-cadastro.input-conteiner').after(subtitleNews)
     
   },
+  createContentBg: ()=> {
+    const content = document.createElement('div');
+    content.classList.add('content-bg-news')
+    document.querySelector('#barraNewsletter').appendChild(content)
+  },
   init: function () {
     this.subtitle();
+    document.querySelector(".main-header") !== null &&
+  window.matchMedia("(max-width: 700px)").matches == false ? this.createContentBg() : null;
   }
 }
 
@@ -170,7 +183,7 @@ const rodape = {
     document.querySelector('#rodape .conteiner .row-fluid .row-fluid').prepend(document.querySelector('.contact-data'))
     document.querySelector('#rodape .contact-data').appendChild(document.querySelector('.lista-redes'))
 
-    document.querySelector('.sobre-loja-rodape').prepend(document.querySelector('h1.logo').cloneNode(true))
+    document.querySelector('.sobre-loja-rodape').prepend(document.querySelector('.logo').cloneNode(true))
 
     document.querySelector('.pagamento-selos + div .row-fluid div:nth-of-type(2)').appendChild(document.querySelector('.logo-mt'))
     document.querySelector('.pagamento-selos + div .row-fluid div:nth-of-type(2)').removeAttribute('style')

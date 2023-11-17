@@ -25,6 +25,11 @@
             font-size: 20px;
             margin-bottom: 16px!important;
           }
+          a {
+            &:before {
+              display: none;
+            }
+          }
           .sobre-loja-rodape {
             .lista-redes {
               display: none;

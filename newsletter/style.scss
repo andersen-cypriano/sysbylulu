@@ -1,6 +1,20 @@
 // NEWSLETTER
 #barraNewsletter.posicao-rodape {
+  position: relative;
+  z-index: 10;
   background: #faeee5 !important;
+  margin: 50px 0;
+  .content-bg-news {
+    width: 300px;
+    height: 300px;
+    background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/bgnews.png") center center no-repeat;
+    z-index: -100;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+    background-size: contain;
+  }
   .conteiner {
     background: transparent !important;
     .row-fluid {
