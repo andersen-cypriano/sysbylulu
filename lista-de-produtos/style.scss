@@ -1,0 +1,112 @@
+#corpo .listagem .listagem-item .imagem-produto {
+  display: initial;
+}
+
+#listagemProdutos {
+  position: relative;
+  .titulo-categoria {
+    font-family: var(--secundary-font);
+    text-align: center;
+    color: var(--brown) !important;
+    font-size: 60px !important;
+    margin-top: 0 !important;
+    font-weight: 500!important;
+    padding-left: auto!important;
+    pointer-events: none;
+    &:hover {
+      padding-left: auto!important;
+    }
+    &:nth-of-type(1) {
+      padding-left: auto!important;
+      margin-top: -39px !important;
+    }
+  }
+  .listagem-linha {
+    .slick-slide {
+      > div {
+        display: flex!important;
+        justify-content:center!important;
+      }
+    }
+    .listagem-item {
+      max-width: 244px;
+      padding: 0;
+      border-bottom: 1px solid var(--pink);
+      > div.imagem-produto {
+        height: auto!important;
+        
+        img {
+          position: relative!important;
+          width: 100%;
+          object-fit: unset;
+
+        }
+      }
+      .info-produto {
+        a.nome-produto {
+          text-align: center;
+          color: #131313;
+          font-size: 16px;
+          padding: 0;
+          margin: 0 0 16px 0;
+          min-height: auto;
+        }
+        .preco-produto {
+          flex-direction: column !important;
+          > div {
+            text-align: center;
+            &:nth-of-type(1) {
+              span,
+              strong {
+                font-size: 12px !important;
+                color: #131313 !important;
+              }
+            }
+            &:nth-of-type(2) {
+              strong {
+                font-size: 20px !important;
+                color: #131313 !important;
+                font-weight: 600;
+                font-family: var(--main-font);
+              }
+            }
+          }
+        }
+      }
+      .acoes-produto {
+        a.botao-comprar {
+          top: calc(100% - 50px);
+          background: var(--brown) !important;
+          padding: 5px 40px;
+          font-size: 13px;
+          width: 200px;
+          height: 48px;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0;
+          &:after {
+            content: 'COMPRAR';
+            font-size: 13px;
+          }
+        }
+      }
+      .bandeiras-produto {
+        > span {
+          background-color: var(--brown) !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #listagemProdutos {
+    .titulo-categoria {
+      &:nth-of-type(1) {
+        // margin-top: 20px!important;
+      }
+    }
+  }
+}

@@ -1,6 +1,11 @@
 #cabecalho {
   width: 100vw;
   position: fixed !important;
+  background-color: #fff;
+  .conteiner {
+    width: 100%;
+    max-width: 1270px !important;
+  }
 }
 .content-top-bar {
   position: relative;
@@ -47,6 +52,8 @@
 }
 
 div.main-header {
+  margin: 0 !important;
+  width: 100% !important;
   .conteudo-topo {
     width: 33% !important;
     justify-content: flex-start !important;
@@ -83,6 +90,14 @@ div.main-header {
         background: transparent;
         color: var(--pink);
         border-bottom: 1px solid var(--pink-light);
+        &::before {
+          content: '';
+          width: 18px;
+          height: 18px;
+          background: transparent
+            url("https://cdn.awsli.com.br/2444/2444356/arquivos/lupa.svg")
+            center center no-repeat;
+        }
       }
     }
     + div {
@@ -120,6 +135,12 @@ div.main-header {
             background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/favorite-nobg.svg")
               center center no-repeat;
           }
+          &:hover {
+            a {
+              background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/favorito-bg.svg")
+                center center no-repeat;
+            }
+          }
         }
         &:nth-of-type(3) {
           display: none;
@@ -134,9 +155,9 @@ div.main-header {
           display: none;
         }
         .submenu {
-          background: var(--pink)!important;
+          background: var(--pink) !important;
           &::after {
-            border-bottom-color: var(--pink)!important;
+            border-bottom-color: var(--pink) !important;
           }
         }
       }
@@ -145,7 +166,7 @@ div.main-header {
           position: relative !important;
           animation: none !important;
           .carrinho-interno-ajax {
-            display: none!important;
+            display: none !important;
           }
           > a {
             width: 20px;
@@ -168,8 +189,13 @@ div.main-header {
               font-weight: 700;
               line-height: 1;
               box-sizing: border-box;
+
+            text-align: center!important;
               &:before {
                 background-color: #000 !important;
+                width: 15px;
+                height: 15px;
+
               }
             }
           }
@@ -207,13 +233,37 @@ div.main-header {
   background: #fff !important;
   display: block;
   ul.nivel-um {
-    justify-content: center !important;
+    width: 100%;
+    justify-content: space-between !important;
+    > li {
+      > a {
+        strong {
+          margin: 0.2rem 0;
+        }
+        &:hover {
+          background-color: var(--brown);
+          strong {
+            color: #fff !important;
+          }
+        }
+      }
+      
+    }
     li[class^="categoria-id-"] {
       > a {
         color: #000 !important;
         font-size: 14px !important;
+        margin: 0.2rem 1rem;
+
         strong {
           text-transform: uppercase !important;
+          font-family: var(--main-font) !important;
+        }
+      }
+      > a[title="Sale"] {
+        background-color: var(--brown)!important;
+        strong {
+          color: #FFF!important;
         }
       }
     }
@@ -223,15 +273,20 @@ div.main-header {
         font-size: 14px !important;
         strong {
           text-transform: uppercase !important;
+          font-family: var(--main-font) !important;
         }
       }
       .nivel-dois {
         width: 309px;
         border-radius: 0 0 20px 20px;
         box-shadow: 0px 3px 6px #00000029;
+        top: 33px;
         li {
           width: 50%;
-          margin: 0!important;
+          margin: 0 !important;
+          a {
+            font-family: var(--main-font) !important;
+          }
         }
       }
     }
@@ -252,7 +307,8 @@ div.main-header {
       display: none;
     }
   }
-  h1.logo, h2.logo {
+  h1.logo,
+  h2.logo {
     a {
       height: 60px;
     }
@@ -293,80 +349,6 @@ div.main-header {
     padding-top: 0;
   }
 }
-
-.mini-banner {
-  max-width: 100% !important;
-  padding: 70px 20px;
-  background-color: var(--pink);
-}
-
-#listagemProdutos {
-  position: relative;
-  .titulo-categoria {
-    font-family: var(--secundary-font);
-    text-align: center;
-    color: var(--brown) !important;
-    font-size: 45px !important;
-    margin-top: 0 !important;
-    &:nth-of-type(1) {
-      margin-top: -29px !important;
-    }
-  }
-  .listagem-linha {
-    .listagem-item {
-      .imagem-produto {
-      }
-      .info-produto {
-        a.nome-produto {
-          text-align: center;
-          color: #131313;
-          font-size: 16px;
-          padding: 0;
-          margin: 0 0 16px 0;
-          min-height: auto;
-        }
-        .preco-produto {
-          flex-direction: column !important;
-          > div {
-            text-align: center;
-            &:nth-of-type(1) {
-              span,
-              strong {
-                font-size: 12px !important;
-                color: #131313 !important;
-              }
-            }
-            &:nth-of-type(2) {
-              strong {
-                font-size: 20px !important;
-                color: #131313 !important;
-                font-weight: 600;
-                font-family: var(--main-font);
-              }
-            }
-          }
-        }
-      }
-      .acoes-produto {
-        a.botao-comprar {
-          top: calc(100% - 50px);
-          background: var(--brown) !important;
-          padding: 5px 40px;
-          font-size: 13px;
-        }
-      }
-      .bandeiras-produto {
-        display: none;
-        > span {
-          background-color: var(--brown) !important;
-        }
-      }
-    }
-  }
-}
-
-
-
 
 
 @media (max-width: 768px) {
@@ -550,12 +532,13 @@ div.main-header {
     .menu {
       &::after {
         width: 15px !important;
-    height: 15px !important;
-    right: 16px !important;
-    left: auto !important;
-    content: "" !important;
-    background: url(https://cdn.awsli.com.br/2444/2444356/arquivos/close.svg) center center no-repeat !important;
-    top: 15px!important;
+        height: 15px !important;
+        right: 16px !important;
+        left: auto !important;
+        content: "" !important;
+        background: url(https://cdn.awsli.com.br/2444/2444356/arquivos/close.svg)
+          center center no-repeat !important;
+        top: 15px !important;
       }
       .top-menu {
         width: 90%;
@@ -564,51 +547,49 @@ div.main-header {
         border-bottom: 1px solid var(--pink-light);
         font-weight: 600;
         display: block;
-        
       }
       ul.nivel-um {
-        display: block!important;
+        display: block !important;
         .titulo {
-          font-weight: 400!important;
+          font-weight: 400 !important;
         }
         li.com-filho {
           > a {
             &::after {
-              content: '+'
+              content: "+";
             }
           }
         }
         li.com-filho.opened {
           > a {
             &::after {
-              content: '-'
+              content: "-";
             }
           }
         }
         > li {
           > a {
-            color: var(--brown)!important;
+            color: var(--brown) !important;
             text-transform: uppercase;
             font-weight: 400;
-            
           }
           .nivel-dois {
-            border-radius: 0!important;
-            box-shadow: 0 0 0 transparent!important;
+            border-radius: 0 !important;
+            box-shadow: 0 0 0 transparent !important;
             height: 0;
             overflow: hidden;
-            transition: all .5s ease;
+            transition: all 0.5s ease;
             li {
               a {
-                font-weight: 400!important;
+                font-weight: 400 !important;
                 &::before {
-                  display: none!important;
+                  display: none !important;
                 }
               }
             }
           }
           .show-menu-dois {
-            height: auto!important;
+            height: auto !important;
           }
         }
       }
@@ -625,24 +606,7 @@ div.main-header {
     }
   }
 
-  .mini-banner {
-    display: block !important;
-    padding: 10px 10px 40px 10px !important;
-    .modulo {
-      margin: 0 !important;
-      padding: 10px;
-    }
-    .smarthint-home-position3,
-    .blank-home-position3 {
-      display: none;
-    }
-  }
+  
 
-  #listagemProdutos {
-    .titulo-categoria {
-      &:nth-of-type(1) {
-        // margin-top: 20px!important;
-      }
-    }
-  }
+  
 }
