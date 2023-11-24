@@ -26,6 +26,7 @@
             margin-bottom: 16px!important;
           }
           a {
+            font-weight: 400;
             &:before {
               display: none;
             }
@@ -50,6 +51,56 @@
           }
           .contact-data {
             padding-top: 50px;
+            > ul {
+              li {
+                margin-bottom: 10px;
+                &:nth-of-type(1) {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  i {
+                    display: none;
+                  }
+                  &::before {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    content: '';
+                    background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/cel_rodape.svg') center center no-repeat;
+                  }
+                }
+                &:nth-of-type(2) {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  i {
+                    display: none;
+                  }
+                  &::before {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    content: '';
+                    background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/whatsapp_rodape.svg') center center no-repeat;
+                  }
+                }
+                &:nth-of-type(3) {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  i {
+                    display: none;
+                  }
+                  &::before {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    content: '';
+                    background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/email_rodape.svg') center center no-repeat;
+                  }
+                }
+              }
+            }
             .lista-redes {
               display: block!important;
               ul {
@@ -100,9 +151,22 @@
   
   .selos {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 40px;
     .titulo {
       color: var(--brown);
+      text-wrap: nowrap;
+      margin: 0;
+      padding: 0;
+      font-size: 23px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      li {
+        margin: 0;
+      }
     }
   }
 }

@@ -1,0 +1,55 @@
+.main-banner {
+  position: relative;
+  .flex-viewport {
+    ul.slides {
+      li {
+        img,
+        a {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+  ul.flex-direction-nav {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    li.flex-nav-prev {
+      width: 45px;
+      height: 45px;
+      
+      a {
+        position: absolute!important;
+        width: 45px;
+        height: 45px;
+        display: block;
+        left: 15px!important;
+        opacity: 1;
+        transform: rotateY(180deg);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5) url("https://cdn.awsli.com.br/2444/2444356/arquivos/seta_carroussel.svg") center center no-repeat;
+      }
+    }
+    li.flex-nav-next {
+      width: 45px;
+      height: 45px;
+      
+      a {
+        position: absolute!important;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: block;
+        right: 15px!important;
+        opacity: 1;
+        font-size: 0!important;
+        color: transparent;
+        background: rgba(255, 255, 255, 0.5) url("https://cdn.awsli.com.br/2444/2444356/arquivos/seta_carroussel.svg") center center no-repeat;
+      }
+    }
+  }
+}

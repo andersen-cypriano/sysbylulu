@@ -530,6 +530,7 @@ div.main-header {
       }
     }
     .menu {
+      overflow-y: auto!important;
       &::after {
         width: 15px !important;
         height: 15px !important;
@@ -553,6 +554,29 @@ div.main-header {
         .titulo {
           font-weight: 400 !important;
         }
+        .opened {
+          > a {
+            background: transparent!important;
+            strong {
+              color: var(--brown)!important;
+            }
+          }
+        }
+        li[class^="categoria-id-"] {
+          background: transparent!important;
+          > a {
+            margin: 0;
+          }
+          > a[title="Sale"] {
+            background-color: var(--brown)!important;
+            display: inline-block;
+            margin-left: 15px;
+            strong {
+              color: #FFF!important;
+            }
+          }
+        }
+        
         li.com-filho {
           > a {
             &::after {

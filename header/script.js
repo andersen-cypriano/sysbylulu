@@ -157,8 +157,6 @@ const newsletter = {
   },
   init: function () {
     this.subtitle();
-    document.querySelector(".main-header") !== null &&
-  window.matchMedia("(max-width: 700px)").matches == false ? this.createContentBg() : null;
   }
 }
 
@@ -174,22 +172,6 @@ const sliders = {
   },
   init: function () {
     this.miniBanner();
-  }
-}
-
-
-const rodape = {
-  moveContents: ()=> {
-    document.querySelector('#rodape .conteiner .row-fluid .row-fluid').prepend(document.querySelector('.contact-data'))
-    document.querySelector('#rodape .contact-data').appendChild(document.querySelector('.lista-redes'))
-
-    document.querySelector('.sobre-loja-rodape').prepend(document.querySelector('.logo').cloneNode(true))
-
-    document.querySelector('.pagamento-selos + div .row-fluid div:nth-of-type(2)').appendChild(document.querySelector('.logo-mt'))
-    document.querySelector('.pagamento-selos + div .row-fluid div:nth-of-type(2)').removeAttribute('style')
-  },
-  init: function () {
-    this.moveContents();
   }
 }
 
@@ -210,6 +192,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // HOME
     document.querySelector('#barraNewsletter') ? newsletter.init() : null;
-
-    document.querySelector('#rodape') ? rodape.init() : null;
 });
