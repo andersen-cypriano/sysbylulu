@@ -356,6 +356,7 @@ div.main-header {
     padding-top: 227px;
   }
   #cabecalho {
+    width: 100vw!important;
     &::before {
       display: none !important;
     }
@@ -377,6 +378,9 @@ div.main-header {
         > .span6 {
           h1.logo {
             margin: 0 auto;
+          }
+          h2.logo {
+            display: none!important;
           }
         }
         .busca {
