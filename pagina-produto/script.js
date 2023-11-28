@@ -54,8 +54,48 @@ const singleProduct = {
     
     document.querySelector('.produto-compartilhar').remove();
   },
+  createDescription: () => {
+    const contentDescription = document.createElement('div');
+    contentDescription.classList.add('content-description');
+
+    const linkDescription = document.createElement('div')
+    linkDescription.innerHTML = `
+      <h2 class="button">Descrição do produto <span>e Tabela de medidas</span></h2><span></span>
+    `;
+    linkDescription.addEventListener('click', e => {
+      e.target.nextElementSibling.classList.toggle('show-desc')
+    })
+    contentDescription.appendChild(linkDescription);
+    document.querySelector('#descricao').removeAttribute('class')
+    contentDescription.appendChild(document.querySelector('#descricao'));
+
+
+    document.querySelector('#formCalcularCep').parentElement.before(contentDescription)
+  },
+  createDevolucoes: ()=> {
+    const contentDevolucoes = document.createElement('div');
+    contentDevolucoes.classList.add('content-devolucoes');
+
+    const linkDevolucoes = document.createElement('div')
+    linkDevolucoes.innerHTML = `
+      <h2 class="button">Trocas e devoluções</h2><span></span>
+    `;
+    linkDevolucoes.addEventListener('click', e => {
+      e.target.nextElementSibling.classList.toggle('show-desc')
+    })
+    contentDevolucoes.appendChild(linkDevolucoes);
+
+    const textDevolucao = document.createElement('p');
+    textDevolucao.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum ea harum quidem nam possimus. Odit totam architecto ipsum vero.'
+    contentDevolucoes.appendChild(textDevolucao);
+
+    document.querySelector('.content-description').after(contentDevolucoes)
+    
+  },
   init: function () {
     this.cloneButtonShare();
+    this.createDescription();
+    this.createDevolucoes();
     setTimeout(() => {
       window.matchMedia("(max-width: 700px)").matches ? this.createLogo() : null;
     }, 200);

@@ -218,6 +218,115 @@
                   }
                 }
               }
+              .content-description {
+                padding: 0;
+                > div:has(h2) {
+                  border-bottom: 1px solid var(--brown);
+                  margin-bottom: 10px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  cursor: pointer;
+                  > h2 {
+                    pointer-events: none;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 16px;
+                    color: var(--brown);
+                    span {
+                      color: var(--grey)
+                    }
+                  }
+                  >span {
+                    pointer-events: none;
+                    width: 20px;
+                    height: 20px;
+                    background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/seta_ordenar_por.svg') center center no-repeat;
+                  }
+                }
+                #descricao {
+                  display: none;
+                  p {
+                    font-size: 16px;
+                    color: #131313;
+                  }
+                }
+                >div[class="show-desc"] {
+                  display: block!important;
+                }
+              }
+              .content-devolucoes {
+                padding: 0;
+                margin-bottom: 20px;
+                > div:has(h2) {
+                  border-bottom: 1px solid var(--brown);
+                  margin-bottom: 10px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  cursor: pointer;
+                  > h2 {
+                    pointer-events: none;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 16px;
+                    color: var(--brown);
+                  }
+                  >span {
+                    pointer-events: none;
+                    width: 20px;
+                    height: 20px;
+                    background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/seta_ordenar_por.svg') center center no-repeat;
+                  }
+                }
+                >p[class="show-desc"] {
+                  display: block!important;
+                }
+                p {
+                  font-size: 16px;
+                  color: #131313;
+                  display: none;
+                }
+              }
+              .cep {
+                #formCalcularCep {
+                  justify-content: flex-start;
+                  > label {
+                    font-size:16px;
+                    color: #131313;
+                  }
+                  > div {
+                    .input-append {
+                      display: flex;
+                      align-items: center;
+                    }
+                    input {
+                      border: 1px solid #D8D8D8;
+                      height: 32px;
+                      padding: 0;
+                      text-align: center;
+
+                    }
+                    button {
+                      border: 0;
+                      background: var(--brown);
+                      height: 32px;
+                      padding: 0;
+                      border-radius: 0px 10px 10px 0px;
+                      padding: 0 40px;
+                      color: transparent;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      &:before {
+                        content: 'Calcular';
+                        color: #FFF;
+                        font-size: 16px;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
