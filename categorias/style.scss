@@ -118,6 +118,9 @@
       }
     }
 
+    .menu.lateral .ativo{
+      background-color: transparent!important;
+    }
     .menu.lateral {
       .nivel-um {
         li {
@@ -129,6 +132,11 @@
                 color: var(--brown);
               }
             }
+          }
+        }
+        .ativo {
+          > a {
+            background-color:transparent!important;
           }
         }
         .com-filho {
@@ -154,6 +162,7 @@
         }
       }
     }
+    
     .filtro-coluna {
       .titulo {
         color: var(--brown) !important;

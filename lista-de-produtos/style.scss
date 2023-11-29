@@ -118,12 +118,39 @@
     margin-bottom: 30px;
   }
   > div {
-    width: 1039px;
+    width: 1270px;
     ul.slides {
       display: flex;
       li {
         float: none !important;
         clear: both;
+        padding: 35px;
+        > div {
+          border-bottom: 1px solid rgba($color: #ca8661, $alpha: .5);
+          padding-bottom: 10px;
+        }
+        .bandeiras-produto {
+          top: 50px;
+          left: 35px;
+          z-index: 10;
+          padding: 5px;
+          background: var(--brown);
+          span {
+            display: inline-block;
+            padding: 0 10px;
+            line-height: 17px;
+            color: #FFF;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 500;
+            font-family: var(--main-font);
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+            box-shadow: 0 0 0 transparent;
+            white-space: nowrap;
+          }
+        }
         > div {
           display: flex;
           flex-direction: column;
@@ -136,11 +163,15 @@
             }
           }
           .imagem-produto {
+            width: 100%!important;
             margin-bottom: 20px;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+            img {
+              width: 100%;
+            }
           }
           .has-zoom {
             &:hover {
@@ -201,7 +232,7 @@
           }
           .acoes-produto {
             position: absolute;
-            top: 50%;
+            top: 55%;
             transform: translateY(-50%);
             z-index: 3;
             pointer-events: none;
@@ -375,11 +406,14 @@
                 font-family: var(--main-font);
                 margin-bottom: 16px;
                 display: block;
+                min-height: 40px;
               }
               .preco-produto {
                 display: flex;
                 flex-direction: column-reverse;
                 align-items: center;
+                justify-content: center;
+                min-height: 71px;
                 > div {
                   &:nth-of-type(1) {
                     margin-bottom: 10px;
@@ -393,11 +427,19 @@
                     }
                   }
                   &:nth-of-type(2) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     strong {
                       font-size: 20px;
                       font-family: var(--main-font);
                       color: #131313;
                     }
+                  }
+                  .preco-a-partir {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                   }
                 }
               }
@@ -410,7 +452,9 @@
               z-index: 3;
               pointer-events: none;
               opacity: 1;
+              width: 100%!important;
               a.botao-comprar {
+                width: 100%!important;
                 top: auto;
                 background: transparent !important;
                 padding: 5px 40px;
