@@ -1,6 +1,6 @@
 const miniBanner = {
   changeTitle: () => {
-    document.querySelector('.vitrine-lancamento').textContent = 'Sales';
+    document.querySelector('.vitrine-lancamento').textContent = 'Sale';
   },
   createSlider: () => {
     $(document.querySelector('.listagem-linha > div')).slick();

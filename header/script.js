@@ -45,7 +45,7 @@ const cabecalho = {
         .classList.remove("menu-hidden");
     }
     window.addEventListener("scroll", () => {
-      window.scrollY > 0 ? setMiniHeader() : removeMiniHeader();
+      window.scrollY > 173 ? setMiniHeader() : removeMiniHeader();
     });
   },
   addButtonsMiniHeader: () => {

@@ -295,6 +295,10 @@ div.main-header {
 
 // MINI HEADER
 .mini-header {
+  background: rgba($color: #FFF, $alpha: .85)!important;
+  > .conteiner {
+    background-color: transparent !important;
+  }
   .content-top-bar {
     display: none;
   }
@@ -305,6 +309,11 @@ div.main-header {
     }
     div.menu-hidden {
       display: none;
+    }
+    #form-buscar {
+      .ui-autocomplete-input {
+        background: transparent!important;
+      }
     }
   }
   h1.logo,
@@ -333,6 +342,9 @@ div.main-header {
   }
   .menu-hidden {
     display: none;
+  }
+  .menu.superior {
+    background: rgba($color: #FFF, $alpha: .85);
   }
 }
 // MAIN BANNER

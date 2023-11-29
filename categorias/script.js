@@ -38,7 +38,7 @@ const categoria = {
     })
   },
   init: function () {
-    this.createTopContent();
+    document.querySelector(".conteudo .titulo") == null ? null : this.createTopContent();
     setTimeout(() => {
       this.createLogo();
     }, 200);

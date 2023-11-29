@@ -7,7 +7,7 @@ const productListFeatures = {
     
 
     const title = document.createElement('h1');
-    title.textContent = 'Sales'
+    title.textContent = 'Sale'
     contentList.appendChild(title)
     contentList.appendChild(ul)
     document.querySelector('#listagemProdutos .vitrine-lancamento').parentElement.before(contentList) 
