@@ -19,7 +19,7 @@ const mainBanner = {
       ul.appendChild(element)
     })
 
-    document.querySelector('.secao-banners').remove();
+    // document.querySelector('.secao-banners').remove();
 
     $('.main-banner').flexslider({
       animation: "slide"

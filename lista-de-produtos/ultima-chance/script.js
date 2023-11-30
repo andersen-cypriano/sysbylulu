@@ -54,8 +54,13 @@ const ultimaChance = {
 
 
   },
+  createBanner: () => {
+    const contentBannerListagem = document.querySelector('.listagem-vitrine-destaques')
+    contentBannerListagem.prepend(document.querySelector('.tarja > a'));
+  },
   init: function() {
     window.matchMedia("(max-width: 700px)").matches ? this.createProductList(2) : this.createProductList(4);
+    this.createBanner();
   }
 }
 

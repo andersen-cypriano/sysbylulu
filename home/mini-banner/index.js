@@ -13,7 +13,7 @@ const miniBanner = {
       elLi.appendChild(element)
       document.querySelector('.content-slider-mini-banner ul').appendChild(elLi)
     })
-    document.querySelector('.mini-banner').remove();
+    // document.querySelector('.mini-banner').remove();
 
     $('.content-slider-mini-banner').flexslider({
       animation: "slide",
