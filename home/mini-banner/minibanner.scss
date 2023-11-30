@@ -34,4 +34,55 @@
       display: none;
     }
   }
+  .content-slider-mini-banner {
+    position: relative;
+    background-color: var(--pink);
+    display: block !important;
+    padding: 10px 10px 40px 10px !important;
+    ul.slides {
+      
+      li {
+        width: 100%;
+        a {
+          width: 100%;
+          display: block;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    ol {
+      display: none;
+    }
+    .flex-direction-nav {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 900;
+      left: 0;
+      li {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+      }
+      .flex-nav-prev {
+        position: absolute;
+        left: 10px;
+        a {
+          left: 0;
+          background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/arrow-left-nobg.svg') center center no-repeat;
+        }
+      }
+      .flex-nav-next {
+        position: absolute;
+        right: 10px;
+        a {
+          right: 0;
+          background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/arrow-right-nobg.svg') center center no-repeat;
+        }
+      }
+    }
+  }
 }

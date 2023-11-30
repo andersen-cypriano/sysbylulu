@@ -259,6 +259,9 @@
       }
     }
   }
+  ol {
+    display: none;
+  }
   ul.flex-direction-nav {
     width: 100%;
     position: absolute;
@@ -476,6 +479,10 @@
               }
             }
           }
+          .bandeiras-produto {
+            top: 20px;
+            left: 5px;
+          }
         }
       }
     }
@@ -499,10 +506,10 @@
           display: block;
           left: 15px !important;
           opacity: 1;
-          transform: rotateY(180deg);
+          transform: rotateY(0);
           border-radius: 50%;
           background: transparent
-            url("https://cdn.awsli.com.br/2444/2444356/arquivos/seta_carroussel.svg")
+            url("https://cdn.awsli.com.br/2444/2444356/arquivos/arrow-left-nobg.svg")
             center center no-repeat !important;
         }
       }
@@ -522,7 +529,7 @@
           font-size: 0 !important;
           color: transparent;
           background: transparent
-            url("https://cdn.awsli.com.br/2444/2444356/arquivos/seta_carroussel.svg")
+            url("https://cdn.awsli.com.br/2444/2444356/arquivos/arrow-right-nobg.svg")
             center center no-repeat !important;
         }
       }

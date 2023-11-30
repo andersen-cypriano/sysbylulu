@@ -19,7 +19,11 @@ const productListFeatures = {
       li.appendChild(element)
       document.querySelector('.listagem-vitrine-lancamentos ul').appendChild(li)
     })
-    document.querySelector('#listagemProdutos .vitrine-lancamento').parentElement.remove()
+
+    // Remove title and ul of product list cloned before
+    document.querySelector('#listagemProdutos .vitrine-lancamento').nextElementSibling.remove()
+    document.querySelector('#listagemProdutos .vitrine-lancamento').remove()
+    
     $('.listagem-vitrine-lancamentos').flexslider({
       animation: "slide",
       animationLoop: false,
