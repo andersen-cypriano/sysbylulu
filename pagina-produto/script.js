@@ -105,7 +105,4 @@ const singleProduct = {
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".pagina-produto") ? singleProduct.init() : null;
 
-
-
-  // window.matchMedia("(max-width: 700px)").matches ? categoria.initMobile() : null;
 });

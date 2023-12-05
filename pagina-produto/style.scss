@@ -11,6 +11,29 @@
         > div {
           // content image
           &:nth-of-type(1) {
+            .produto-thumbs {
+              #carouselImagem {
+                ul.miniaturas {
+                  li {
+                    height: 110px;
+                    a {
+                      width: 100%;
+                      height: 100%;
+                      border-color: transparent !important;
+                      border: none !important;
+                      box-shadow: 0 0 0 transparent !important;
+                      span {
+                        img {
+                          width: 100%;
+                          height: auto;
+                          position: relative;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
           // content infos
           &:nth-of-type(2) {
@@ -197,7 +220,7 @@
                     }
                   }
                   .button-favorite {
-                    width: 30%;
+                    width: 37%;
                     height: 46px;
                     border-radius: 6px;
                     border: 1px solid var(--pink-light);
@@ -213,7 +236,8 @@
                       width: 20px;
                       height: 20px;
                       display: block;
-                      background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/favorite-nobg.svg') center center no-repeat;
+                      background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/favorite-nobg.svg")
+                        center center no-repeat;
                     }
                   }
                 }
@@ -234,14 +258,15 @@
                     font-size: 16px;
                     color: var(--brown);
                     span {
-                      color: var(--grey)
+                      color: var(--grey);
                     }
                   }
-                  >span {
+                  > span {
                     pointer-events: none;
                     width: 20px;
                     height: 20px;
-                    background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/seta_ordenar_por.svg') center center no-repeat;
+                    background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/seta_ordenar_por.svg")
+                      center center no-repeat;
                   }
                 }
                 #descricao {
@@ -251,8 +276,8 @@
                     color: #131313;
                   }
                 }
-                >div[class="show-desc"] {
-                  display: block!important;
+                > div[class="show-desc"] {
+                  display: block !important;
                 }
               }
               .content-devolucoes {
@@ -272,15 +297,16 @@
                     font-size: 16px;
                     color: var(--brown);
                   }
-                  >span {
+                  > span {
                     pointer-events: none;
                     width: 20px;
                     height: 20px;
-                    background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/seta_ordenar_por.svg') center center no-repeat;
+                    background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/seta_ordenar_por.svg")
+                      center center no-repeat;
                   }
                 }
-                >p[class="show-desc"] {
-                  display: block!important;
+                > p[class="show-desc"] {
+                  display: block !important;
                 }
                 p {
                   font-size: 16px;
@@ -291,21 +317,28 @@
               .cep {
                 #formCalcularCep {
                   justify-content: flex-start;
+
                   > label {
-                    font-size:16px;
+                    font-size: 16px;
                     color: #131313;
                   }
                   > div {
+                    display: flex;
+                    align-items: center;
                     .input-append {
                       display: flex;
                       align-items: center;
                     }
                     input {
-                      border: 1px solid #D8D8D8;
+                      border: 1px solid #d8d8d8;
                       height: 32px;
                       padding: 0;
                       text-align: center;
-
+                    }
+                    > a.hide {
+                      display: block !important;
+                      color: var(--brown);
+                      font-size: 12px;
                     }
                     button {
                       border: 0;
@@ -319,8 +352,8 @@
                       align-items: center;
                       justify-content: center;
                       &:before {
-                        content: 'Calcular';
-                        color: #FFF;
+                        content: "Calcular";
+                        color: #fff;
                         font-size: 16px;
                       }
                     }
@@ -334,3 +367,8 @@
     }
   }
 }
+
+.acoes-flutuante {
+  display: none !important;
+}
+
