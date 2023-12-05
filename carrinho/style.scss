@@ -1,0 +1,146 @@
+.pagina-carrinho {
+  .conteiner-principal {
+    padding-top: 200px;
+    #corpo {
+      .breadcrumbs {
+        display: none;
+      }
+    }
+    .finalizar-compra {
+      .cabecalho-interno {
+        .titulo {
+          font-size: 20px;
+          color: var(--brown);
+          span {
+            color: var(--grey);
+          }
+        }
+      }
+      table.tabela-carrinho {
+        thead {
+          tr {
+            background: transparent;
+            h6.cor-secundaria {
+              color: var(--brown)
+            }
+          }
+        }
+        tbody {
+          .bg-dark {
+            background: transparent!important;
+          }
+          tr[data-produto-id] {
+            .conteiner-imagem {}
+            .produto-info {
+              > a {
+                color: var(--brown);
+                font-weight: 600;
+              }
+            }
+            .preco-produto.destaque-parcela {
+              strong {
+                color: var(--brown);
+              }
+            }
+            .quantidade {
+              a {
+                color: var(--brown);
+              }
+              input {
+                border-radius: 8px;
+              }
+            }
+            .preco-produto {
+              strong {
+                color: var(--brown);
+              }
+            }
+            .excluir {
+              a {
+                color: var(--brown)!important;
+              }
+            }
+            
+          }
+        }
+        tr {
+          &:nth-of-type(3) {
+            #formCalcularFrete {
+              .control-group {
+                .controls {
+                  .input-append {
+                    button {
+                      border-radius: 0 6px 6px 0;
+                      background: var(--brown);
+                      color: #FFF;
+                    }
+                  }
+                  .help-inline {
+                    a {
+                      color: var(--brown);
+                    }
+                  }
+                }
+              }
+            }
+            .formas-envio {
+              .valor {
+                color: #131313;
+              }
+            }
+          }
+        }
+        .total {
+          strong {
+            color: var(--brown);
+          }
+        }
+        div.subtotal {
+          strong {
+            color: var(--brown);
+          }
+        }
+      }
+    }
+    .acao-editar {
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+      .botao {
+        border-radius: 6px;
+        text-transform: uppercase;
+        box-shadow: 0px 3px 6px #00000029;
+        font-size: 12px;
+        height: 48px;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        padding: 0 10px;
+      }
+      a.botao {
+        color: var(--grey);
+        
+      }
+      button.botao {
+        background-color: var(--brown);
+        color: #FFF;
+        border: 1px solid var(--brown);
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pagina-carrinho .conteiner-principal .acao-editar>div {
+    flex-direction: column;
+    align-items: flex-end;
+    button {
+      width: 100%;
+    }
+  }
+}

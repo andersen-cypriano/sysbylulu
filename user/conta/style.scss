@@ -1,0 +1,197 @@
+.pagina-conta {
+  .conteiner-principal {
+    padding-top: 200px;
+    #corpo {
+      .breadcrumbs {
+        display: none;
+      }
+      .secao-principal {
+        > div.coluna {
+          > div.conta-menu {
+            margin-top: 0!important;
+          }
+          .nome-usuario {
+            color: var(--brown);
+          }
+          ul.menu-simples {
+            li {
+              margin-bottom: 10px;
+              a {
+                font-size: 16px;
+                color: #131313!important;
+                background: transparent !important;
+                i {
+                  color: #131313!important;
+                }
+              }
+            }
+          }
+        }
+        .conteudo {
+          > div.minha-conta {
+            .cor-secundaria {
+              color: var(--brown);
+            }
+            ul.abas-conta {
+              li {
+  
+              }
+              li.active {
+                a {
+                  color: #FFF;
+                  background: var(--brown);
+                }
+              }
+            }
+            .abas-conteudo {
+              .botao.principal.pequeno {
+                background: var(--brown);
+                border-radius: 6px;
+              }
+              .botao.pequeno.pull-left {
+                border-radius: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.pagina-pedido-listar {
+  .conteiner-principal {
+    padding-top: 200px;
+    #corpo {
+      .breadcrumbs {
+        display: none;
+      }
+      .secao-principal {
+        > div.coluna {
+          > div.conta-menu {
+            margin-top: 0!important;
+          }
+          .nome-usuario {
+            color: var(--brown);
+          }
+          ul.menu-simples {
+            li {
+              margin-bottom: 10px;
+              a {
+                font-size: 16px;
+                color: #131313!important;
+                background: transparent !important;
+                i {
+                  color: #131313!important;
+                }
+              }
+            }
+          }
+        }
+        .conteudo {
+          .cor-secundaria {
+            color: var(--brown);
+          }
+          ul.abas-conta {
+            li {
+
+            }
+            li.active {
+              a {
+                color: #FFF;
+                background: var(--brown);
+              }
+            }
+          }
+          .abas-conteudo {
+            .botao.principal.pequeno {
+              background: var(--brown);
+              border-radius: 6px;
+            }
+            .botao.pequeno.pull-left {
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagina-favorito-listar {
+  .conteiner-principal {
+    padding-top: 200px;
+    #corpo {
+      .breadcrumbs {
+        display: none;
+      }
+      .secao-principal {
+        > div.coluna {
+          > div.conta-menu {
+            margin-top: 0!important;
+          }
+          .nome-usuario {
+            color: var(--brown);
+          }
+          ul.menu-simples {
+            li {
+              margin-bottom: 10px;
+              a {
+                font-size: 16px;
+                color: #131313!important;
+                background: transparent !important;
+                i {
+                  color: #131313!important;
+                }
+              }
+            }
+          }
+        }
+        .conteudo {
+          .cor-secundaria {
+            color: var(--brown);
+          }
+          ul.abas-conta {
+            li {
+
+            }
+            li.active {
+              a {
+                color: #FFF;
+                background: var(--brown);
+              }
+            }
+          }
+          .abas-conteudo {
+            .botao.principal.pequeno {
+              background: var(--brown);
+              border-radius: 6px;
+            }
+            .botao.pequeno.pull-left {
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .pagina-conta {
+    h3.titulo {
+      padding: 10px 0;
+      font-size: 16px;
+      small {
+        font-size: 13px;
+      }
+    }
+    .minha-conta {
+      .caixa-dados {
+        
+      }
+    }
+  }
+}
