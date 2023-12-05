@@ -1,0 +1,137 @@
+.pagina-login {
+  .conteiner-principal {
+    padding-top: 200px;
+  }
+  #corpo {
+    .conteiner {
+    }
+    + #barraNewsletter {
+      display: none!important;
+    }
+  }
+
+  .cadastro {
+    .cabecalho-interno {
+      .titulo {
+        font-size: 20px;
+        color: var(--brown);
+        span {
+          color: var(--grey);
+        }
+      }
+    }
+    .cadastro-logar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 100px;
+      > div {
+        float: none;
+        clear: both;
+        width: 48%;
+        margin: 0;
+        .caixa-sombreada {
+          border: 0;
+          form {
+            fieldset {
+              legend.titulo {
+                color: var(--brown);
+                font-weight: 500;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        button[type="submit"] {
+          background: var(--brown);
+          border-radius: 6px;
+          box-shadow: 0px 3px 6px #00000029;
+        }
+        &:nth-of-type(1) {
+          // content ja cadastrado
+          border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+          padding-right: 100px !important;
+          
+        }
+        &:nth-of-type(2) {
+          // content Sem cadadastro
+          padding-left: 90px !important;
+        }
+        .recuperar-senha {
+          color: #131313;
+          i {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .pagina-login {
+    .conteiner-principal {
+      padding-top: 190px;
+      #corpo {
+        .conteiner {
+          padding: 0 10px!important;
+        }
+      }
+    }
+  }
+  .cadastro-logar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    flex-direction: column;
+    > div {
+      float: none;
+      clear: both;
+      width: 100%!important;
+      margin: 0;
+      padding: 0!important;
+      .caixa-sombreada {
+        border: 0;
+        form {
+          fieldset {
+            legend.titulo {
+              color: var(--brown);
+              font-weight: 500;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      button[type="submit"] {
+        background: var(--brown);
+        border-radius: 6px;
+        box-shadow: 0px 3px 6px #00000029;
+      }
+      &:nth-of-type(1)[class="span6"] {
+        // content ja cadastrado
+        border-right: 0;
+        padding: 0!important;
+        padding-right: 0!important;
+        
+      }
+      &:nth-of-type(2)[class="span6"] {
+        // content Sem cadadastro
+        padding: 0!important;
+        padding-left: 0 !important;
+      }
+      .recuperar-senha {
+        color: #131313;
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+  .pagina-login .cadastro .cadastro-logar>div:nth-of-type(1) {
+    padding-right: 0!important;
+    border-right: 0!important;
+  }
+  
+  .pagina-login .cadastro .cadastro-logar>div:nth-of-type(2) {
+    padding-left: 0!important;
+
+  }
+}
