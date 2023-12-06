@@ -1,0 +1,95 @@
+.cabecalho-interno {
+  display: block;
+}
+.cliente-editar-dados-link {
+  font-size: 12px;
+  color: var(--brown)
+}
+.carrinho-checkout {
+  .cor-secundaria, .cor-principal {
+    color: var(--brown);
+  }
+  .conteiner-principal {
+    padding-top: 200px;
+  }
+  .campos-pedido {
+    > div {
+      .resumo-compra {
+        table.tabela-carrinho {
+          thead {
+            tr {
+              th {
+                background: transparent;
+              }
+            }
+          }
+
+          tbody {
+            tr.bg-dark {
+              background: transparent;
+            }
+            .tr-checkout-total {
+              span {
+                font-size:13px!important;
+              }
+            }
+            tr {
+              .padding-preco {
+                strong {
+                  font-weight: 600;
+                }
+              }
+              td {
+                &:nth-of-type(2) {
+                  span {
+                    font-size:13px!important;
+                  }
+                }
+              }
+              &:nth-of-type(1) {
+                td[data-produto-id] {
+                  .produto-info {
+                    color: var(--brown);
+                    font-weight: 600;
+                    ul {
+                      li {
+                        span {
+                          color: #131313!important;
+                          font-weight: 500;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              &:nth-of-type(2) {
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #formularioCheckout {
+      #finalizarCompra {
+        width: 100%;
+        height: 48px;
+        background: var(--brown);
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 6px;
+        border: 0;
+        padding: 0 20px;
+        font-size: 14px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+}

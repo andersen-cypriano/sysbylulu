@@ -18,5 +18,5 @@ const rodape = {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector('#rodape') ? rodape.init() : null;
+  document.querySelector('#rodape') && document.querySelector('.selos') ? rodape.init() : null;
 });
