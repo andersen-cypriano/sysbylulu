@@ -1,5 +1,4 @@
 .aproveite-tambem {
- 
   > h4.titulo {
     font-family: var(--secundary-font);
     text-align: center;
@@ -44,7 +43,7 @@
       img {
         position: relative !important;
         width: 100%;
-        object-fit:contain!important; 
+        object-fit: contain !important;
       }
       .info-produto {
         a.nome-produto {
@@ -86,18 +85,20 @@
           font-size: 13px;
           width: 200px;
           height: 48px;
-          padding: 0!important;
+          padding: 0 !important;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 0!important;
+          font-size: 0 !important;
+          box-shadow: 0px 3px 6px #00000029;
+          border-radius: 6px!important;
           &:after {
             content: "COMPRAR";
-            font-size: 13px!important;
+            font-size: 13px !important;
           }
         }
         .popover {
-          display:none!important;
+          display: none !important;
         }
       }
       .bandeiras-produto {
@@ -110,15 +111,14 @@
 }
 
 @media (max-width: 768px) {
-  
   .aproveite-tambem {
-    padding: 0 10px!important;
-    margin: 0!important;
+    padding: 0 10px !important;
+    margin: 0 !important;
     > h4.titulo {
-      font-size: 43px!important;
+      font-size: 43px !important;
     }
     ul {
-      display: block!important;
+      display: block !important;
       li.listagem-linha {
         width: 100%;
         position: relative;
@@ -126,23 +126,24 @@
           li {
             padding: 0;
             .listagem-item {
-              max-width: 244px!important;
-              .imagem-produto {}
+              max-width: 244px !important;
+              .imagem-produto {
+              }
               .info-produto {
                 font-size: 16px;
               }
               div.acoes-produto {
                 opacity: 1;
-                padding-bottom: 0!important;
-                position: relative!important;
-                transform: none!important;
-                display: block!important;
-                height: 48px!important;
+                padding-bottom: 0 !important;
+                position: relative !important;
+                transform: none !important;
+                display: block !important;
+                height: 48px !important;
                 a {
                   background: transparent !important;
-                  border-radius: 6px!important;
-                  border: 1px solid var(--brown)!important;
-                  color: var(--brown)!important;
+                  border-radius: 6px !important;
+                  border: 1px solid var(--brown) !important;
+                  color: var(--brown) !important;
                 }
               }
             }
@@ -156,14 +157,16 @@
           li {
             padding: 0;
             a.flex-prev {
-              background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/arrow-left-nobg.svg') center center no-repeat!important;  
+              background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/arrow-left-nobg.svg")
+                center center no-repeat !important;
               width: 20px;
               height: 20px;
               display: block;
               left: 0;
             }
             a.flex-next {
-              background: url('https://cdn.awsli.com.br/2444/2444356/arquivos/arrow-right-nobg.svg') center center no-repeat!important;  
+              background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/arrow-right-nobg.svg")
+                center center no-repeat !important;
               width: 20px;
               height: 20px;
               display: block;
