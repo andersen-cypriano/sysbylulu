@@ -1,0 +1,22 @@
+.pagina-erro {
+  .breadcrumbs {
+    display: none;
+  }
+  .conteiner-principal {
+    padding-top: 200px;
+  }
+  .secao-principal {
+    .conteudo {
+      padding: 50px 0;
+      width: 100%;
+      text-align: center;
+
+      .titulo {
+        color: var(--brown);
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
