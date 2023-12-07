@@ -17,17 +17,28 @@
         }
       }
       table.tabela-carrinho {
+        border: 0;
         thead {
+          border: 1px solid rgba($color: #000000, $alpha: .2)!important;
           tr {
             background: transparent;
+            th {
+              border: 0!important;
+                background: transparent;
+            }
             h6.cor-secundaria {
               color: var(--brown);
             }
           }
         }
         tbody {
-          .bg-dark {
-            background: transparent !important;
+          tr.bg-dark {
+            background: transparent;
+            border: 1px solid rgba($color: #000000, $alpha: .2)!important;
+            th {
+              border: 0!important;
+              background: transparent;
+            }
           }
           tr[data-produto-id] {
             .conteiner-imagem {

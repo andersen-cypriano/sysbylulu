@@ -92,10 +92,14 @@ const singleProduct = {
     document.querySelector('.content-description').after(contentDevolucoes)
     
   },
+  checkMultiColorVariation: () => {
+    document.querySelector('.atributo-comum a').innerText.split('/').length > 1 ? document.querySelector('.atributo-comum').classList.add('multi-color') : null;
+  },
   init: function () {
     this.cloneButtonShare();
     this.createDescription();
     this.createDevolucoes();
+    this.checkMultiColorVariation();
     setTimeout(() => {
       window.matchMedia("(max-width: 700px)").matches ? this.createLogo() : null;
     }, 200);

@@ -94,6 +94,7 @@
                 .atributo-cor {
                   margin-bottom: 20px;
                 }
+                .multi-color {}
                 .atributo-comum {
                   ul {
                     li {
@@ -130,6 +131,45 @@
                       }
                     }
                   }
+                }
+                .multi-color {
+                  ul {
+                    li {
+                      a {
+                        width: auto !important;
+                        height: 33px;
+                        box-shadow: 0 0 0 transparent;
+                        border: 1px solid var(--grey);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0 20px;
+                        span {
+                          padding: 0;
+                          color: var(--grey);
+                          font-weight: 600;
+                        }
+                      }
+                      a:hover {
+                        background: var(--brown);
+                        span {
+                          color: #fff;
+                          font-weight: 600;
+                        }
+                      }
+                    }
+                    li.active {
+                      a {
+                        background: var(--brown);
+                        color: #fff;
+                        span {
+                          color: #fff;
+                          font-weight: 600;
+                        }
+                      }
+                    }
+                  }
+
                 }
               }
               .acoes-produto {

@@ -1,6 +1,30 @@
 .cabecalho-interno {
   display: block;
 }
+.radio-conteiner {
+  background: var(--brown);
+}
+.content-top-bar {
+  .content-center {
+    p {
+      font-size: 13px;
+    }
+  }
+  a {
+    font-size: 13px
+  }
+}
+.main-header {
+  justify-content: center!important;
+  > div {
+    &:nth-of-type(1) {
+
+    }
+    &:nth-of-type(2) {
+      display: none;
+    }
+  }
+}
 .cliente-editar-dados-link {
   font-size: 12px;
   color: var(--brown)
