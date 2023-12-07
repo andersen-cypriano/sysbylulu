@@ -6,6 +6,9 @@
   color: var(--brown)
 }
 .carrinho-checkout {
+  .logo-mt {
+    align-items: center;
+  }
   .cor-secundaria, .cor-principal {
     color: var(--brown);
   }
@@ -13,12 +16,18 @@
     padding-top: 200px;
   }
   .campos-pedido {
+    .icon-list, .icon-map-marker, .icon-money, .icon-list-alt, .icon-comment {
+      display: none!important;
+    }
     > div {
       .resumo-compra {
         table.tabela-carrinho {
+          border: 0;
           thead {
+            border: 1px solid rgba($color: #000000, $alpha: .2)!important;
             tr {
               th {
+                border: 0!important;
                 background: transparent;
               }
             }
@@ -27,16 +36,23 @@
           tbody {
             tr.bg-dark {
               background: transparent;
+              border: 1px solid rgba($color: #000000, $alpha: .2)!important;
+              th {
+                border: 0!important;
+                background: transparent;
+              }
             }
             .tr-checkout-total {
               span {
                 font-size:13px!important;
+                font-family: var(--main-font);
               }
             }
             tr {
               .padding-preco {
                 strong {
                   font-weight: 600;
+                  font-family: var(--main-font);
                 }
               }
               td {
@@ -51,6 +67,7 @@
                   .produto-info {
                     color: var(--brown);
                     font-weight: 600;
+                    padding: 20px 0;
                     ul {
                       li {
                         span {
@@ -86,6 +103,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        opacity: 1;
         i {
           display: none;
         }

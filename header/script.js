@@ -11,6 +11,9 @@ const cabecalho = {
     alertCupom.innerHTML = `COMPRE COM O CUPOM <span>#PRIMEIRACOMPRA</span> E <span>GANHE 10% OFF</span>`;
 
     const contactButtonTopBar = document.createElement("a");
+    contactButtonTopBar.setAttribute('href', '#modalContato');
+    contactButtonTopBar.setAttribute('data-toggle', 'modal');
+    contactButtonTopBar.setAttribute('data-target', '#modalContato');
     contactButtonTopBar.innerHTML = `<span></span> Fale Conosco`;
 
     contentCenterTopBar.appendChild(alertCupom);
