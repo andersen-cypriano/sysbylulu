@@ -6,7 +6,7 @@
     .conteiner {
     }
     + #barraNewsletter {
-      display: none!important;
+      display: none !important;
     }
   }
   .cabecalho-interno {
@@ -18,27 +18,56 @@
       }
     }
   }
+  .control-group {
+    input {
+      height: 32px;
+    }
+  }
   form.formulario-cadastro-cliente {
+    .icon-lock, .icon-group, .icon-list, .icon-map-marker {
+      display: none;
+    }
     > div {
       .caixa-sombreada {
-        border: 0;
+        
         fieldset {
           legend.titulo {
             color: var(--brown);
             font-weight: 500;
             font-size: 18px;
+            display: flex;
+            align-items: center;
+            .icon-user {
+              &::before {
+                content: "";
+                width: 25px;
+                height: 25px;
+                background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/entrar.svg")
+                  center center no-repeat;
+              }
+            }
           }
           > .row-fluid {
+            
             .control-group {
               .control-label {
                 color: #131313;
                 font-weight: 500;
-              }
-              .controls {
-                input {}
+                display: flex;
+                align-items: center;
+                .icon-envelope {
+                  &::before {
+                    content: "";
+                    width: 25px;
+                    height: 18px;
+                    background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/email_rodape2.svg")
+                      center center no-repeat;
+                  }
+                }
                 
-                
               }
+              
+              
             }
           }
         }
@@ -56,19 +85,24 @@
       }
       button.botao {
         background-color: var(--brown);
-        color: #FFF;
+        color: #fff;
         border: 1px solid var(--brown);
       }
     }
     .help-inline {
       a {
-        color: var(--brown)!important;
+        color: #131313 !important;
         i {
-          color: var(--brown)!important;
+          color: var(--brown) !important;
         }
       }
     }
 
+    .dados-pessoais {
+      .caixa-sombreada {
+        border-top: 1px solid rgba($color: #000000, $alpha: .2)
+      }
+    }
   }
 }
 @media (max-width: 768px) {
@@ -77,10 +111,9 @@
       padding-top: 190px;
       #corpo {
         .conteiner {
-          padding: 0 10px!important;
+          padding: 0 10px !important;
         }
       }
     }
   }
-  
 }

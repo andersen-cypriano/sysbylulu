@@ -156,6 +156,7 @@ div.main-header {
         }
         .submenu {
           background: var(--pink) !important;
+          display: none!important;
           &::after {
             border-bottom-color: var(--pink) !important;
           }

@@ -21,16 +21,17 @@
           tr {
             background: transparent;
             h6.cor-secundaria {
-              color: var(--brown)
+              color: var(--brown);
             }
           }
         }
         tbody {
           .bg-dark {
-            background: transparent!important;
+            background: transparent !important;
           }
           tr[data-produto-id] {
-            .conteiner-imagem {}
+            .conteiner-imagem {
+            }
             .produto-info {
               > a {
                 color: var(--brown);
@@ -40,6 +41,7 @@
             .preco-produto.destaque-parcela {
               strong {
                 color: var(--brown);
+                font-family: var(--main-font);
               }
             }
             .quantidade {
@@ -53,39 +55,70 @@
             .preco-produto {
               strong {
                 color: var(--brown);
+                font-family: var(--main-font);
               }
             }
             .excluir {
               a {
-                color: var(--brown)!important;
+                color: var(--brown) !important;
               }
             }
-            
           }
         }
         tr {
           &:nth-of-type(3) {
             #formCalcularFrete {
               .control-group {
+                label[for="calcularFrete"] {
+                  font-family: var(--main-font);
+                }
                 .controls {
                   .input-append {
+                    input#calcularFrete {
+                      height: 32px;
+                    }
                     button {
-                      border-radius: 0 6px 6px 0;
+                      height: 32px;
+                      border-radius: 0 10px 10px 0;
                       background: var(--brown);
-                      color: #FFF;
+                      color: #fff;
+                      outline: none !important;
+                      padding: 0 20px;
+                      font-family: var(--main-font);
+                      i {
+                        display: none;
+                      }
                     }
                   }
                   .help-inline {
                     a {
-                      color: var(--brown);
+                      color: #000;
+                      i {
+                        color: var(--brown);
+                      }
                     }
                   }
                 }
               }
             }
             .formas-envio {
-              .valor {
-                color: #131313;
+              ul {
+                li {
+                  label.radio {
+                    .prazo {
+                      font-weight: 500;
+                      color: #848484;
+                    }
+                    .valor {
+                      color: #848484;
+                      font-weight: 600;
+                    }
+                    .nome {
+                      font-weight: 500;
+                      color: #848484;
+                    }
+                  }
+                }
               }
             }
           }
@@ -93,11 +126,13 @@
         .total {
           strong {
             color: var(--brown);
+            font-family: var(--main-font);
           }
         }
         div.subtotal {
           strong {
             color: var(--brown);
+            font-family: var(--main-font);
           }
         }
       }
@@ -115,20 +150,67 @@
         font-size: 12px;
         height: 48px;
         display: flex;
-        justify-content:center;
-        align-items:center;
+        justify-content: center;
+        align-items: center;
         padding: 0 10px;
       }
       a.botao {
         color: var(--grey);
-        
       }
       button.botao {
         background-color: var(--brown);
-        color: #FFF;
+        color: #fff;
         border: 1px solid var(--brown);
+        padding: 0 50px;
         i {
           display: none;
+        }
+      }
+    }
+  }
+
+  .caixa-destaque {
+    > h1 {
+      color: var(--brown);
+      font-family: var(--main-font);
+      font-weight: 500;
+    }
+    .botao {
+      font-family: var(--main-font);
+      border-radius: 6px;
+      text-transform: uppercase;
+      box-shadow: 0px 3px 6px #00000029;
+      font-size: 12px;
+      background: var(--brown);
+      padding: 10px 30px;
+    }
+  }
+}
+
+#login-content {
+  .identificacao {
+    .identificacao-inner {
+      .identificacao-title {
+        font-size: 16px;
+        font-family: var(--main-font);
+        color: var(--brown);
+      }
+      #formularioLogin {
+        .control-group {
+          input {
+            height: 30px;
+            padding: 0 0 0 10px;
+            font-size: 14px;
+          }
+          .submit-email {
+            height: 30px;
+            padding: 0 19px;
+            background: var(--brown);
+            font-size: 14px;
+            border-radius: 8px;
+            box-shadow: 0px 3px 6px #00000029;
+            border: 1px solid var(--brown);
+          }
         }
       }
     }
@@ -136,7 +218,7 @@
 }
 
 @media (max-width: 768px) {
-  .pagina-carrinho .conteiner-principal .acao-editar>div {
+  .pagina-carrinho .conteiner-principal .acao-editar > div {
     flex-direction: column;
     align-items: flex-end;
     button {

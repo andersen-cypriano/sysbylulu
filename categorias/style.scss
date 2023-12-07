@@ -73,12 +73,14 @@
         z-index: 2;
         ul {
           li.listagem-linha {
+            border: 0;
             > ul.row-fluid {
+              background: transparent!important;
               li {
                 border: 0 !important;
                 border-color: 0 !important;
                 .listagem-item {
-                  border-color: transparent !important;
+                  border-bottom: 1px solid rgba(202,134,97,.5);
                   .imagem-produto {
                     position: relative;
                     padding: 0;
