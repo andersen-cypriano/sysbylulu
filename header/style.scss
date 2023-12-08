@@ -452,7 +452,41 @@ div.main-header {
             padding: 0;
             justify-content: center !important;
             li {
+              position: relative;
               max-width: 20px;
+              &:nth-of-type(6) {
+                a {
+                  width: 20px;
+                  height: 20px;
+                  background: url("https://cdn.awsli.com.br/2444/2444356/arquivos/carrinho.svg")
+                    center center no-repeat;
+                  background-size: contain;
+                  .qtd-carrinho {
+                    display: block;
+                    position: absolute !important;
+                    top: -9px !important;
+                    left: auto !important;
+                    right: -10px !important;
+                    min-width: 15px;
+                    z-index: 1;
+                    margin: auto;
+                    padding: 4px 4px 1px 5px;
+                    color: #fff;
+                    font-size: 10px;
+                    font-weight: 700;
+                    line-height: 1;
+                    box-sizing: border-box;
+      
+                    text-align: center!important;
+                    &:before {
+                      background-color: #000 !important;
+                      width: 15px;
+                      height: 15px;
+      
+                    }
+                  }
+                }
+              }
             }
             li.visible-phone {
               display: none !important;

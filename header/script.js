@@ -135,11 +135,24 @@ const cabecalho = {
     topMenu.textContent = 'MENU';
     document.querySelector('.menu').prepend(topMenu)
   },
+  setLinksMObile: () => {
+    const elLi = document.createElement('li');
+    elLi.appendChild(document.querySelector('.menu-carrinho a'));
+    document.querySelector('.menu-carrinho').before(elLi);
+    document.querySelector('.menu-carrinho').remove();
+    
+    const elLiUser = document.createElement('li');
+    elLiUser.appendChild(document.querySelector('.actions-menu').children[3].children[0]);
+
+    document.querySelector('.actions-menu').children[3].remove();
+    document.querySelector('.actions-menu').children[3].before(elLiUser);
+  },
   initMobile: function () {
     this.createTopBar();
     this.cloneButtonsMobile();
     this.miniHeaderMobile();
     this.mainMenu();
+    this.setLinksMObile();
   },
 };
 

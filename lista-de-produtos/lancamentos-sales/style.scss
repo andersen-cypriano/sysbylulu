@@ -1,7 +1,9 @@
 #corpo .listagem .listagem-item .imagem-produto {
   display: initial;
 }
-
+.adicionado-carrinho {
+  display: none!important;
+}
 #listagemProdutos {
   position: relative;
   .titulo-categoria {
