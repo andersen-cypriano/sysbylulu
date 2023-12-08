@@ -1,4 +1,27 @@
 .pagina-carrinho {
+  input#calcularFrete {
+    height: 32px;
+  }
+  button#btn-frete {
+    height: 32px;
+    border-radius: 0 10px 10px 0;
+    background: var(--brown);
+    color: #fff;
+    outline: none !important;
+    padding: 0 20px;
+    font-family: var(--main-font);
+    i {
+      display: none;
+    }
+  }
+  .help-inline {
+    a {
+      color: #000!important;
+      i {
+        color: var(--brown);
+      }
+    }
+  }
   .content-top-bar {
     .content-center {
       p {
@@ -6,7 +29,7 @@
       }
     }
     a {
-      font-size: 13px
+      font-size: 13px;
     }
   }
   .conteiner-principal {
@@ -29,12 +52,12 @@
       table.tabela-carrinho {
         border: 0;
         thead {
-          border: 1px solid rgba($color: #000000, $alpha: .2)!important;
+          border: 1px solid rgba($color: #000000, $alpha: 0.2) !important;
           tr {
             background: transparent;
             th {
-              border: 0!important;
-                background: transparent;
+              border: 0 !important;
+              background: transparent;
             }
             h6.cor-secundaria {
               color: var(--brown);
@@ -44,9 +67,9 @@
         tbody {
           tr.bg-dark {
             background: transparent;
-            border: 1px solid rgba($color: #000000, $alpha: .2)!important;
+            border: 1px solid rgba($color: #000000, $alpha: 0.2) !important;
             th {
-              border: 0!important;
+              border: 0 !important;
               background: transparent;
             }
           }
@@ -71,6 +94,11 @@
               }
               input {
                 border-radius: 8px;
+              }
+              .atualizar-quantidade {
+                border-radius: 10px;
+                background: var(--brown);
+                font-family: var(--font);
               }
             }
             .preco-produto {
@@ -98,7 +126,7 @@
                     input#calcularFrete {
                       height: 32px;
                     }
-                    button {
+                    button#btn-frete {
                       height: 32px;
                       border-radius: 0 10px 10px 0;
                       background: var(--brown);
@@ -245,7 +273,8 @@
             font-family: var(--main-font);
           }
         }
-        a.esqueci-senha, a.fazer-cadastro {
+        a.esqueci-senha,
+        a.fazer-cadastro {
           color: var(--brown);
           i {
             display: none;

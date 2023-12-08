@@ -99,6 +99,11 @@
         }
       }
     }
+    .cabecalho-interno {
+      small {
+        display: block!important;
+      }
+    }
   }
   .cadastro-logar {
     display: flex;

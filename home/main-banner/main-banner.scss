@@ -53,3 +53,45 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .main-banner {
+    position: relative;
+    .flex-viewport {
+      ul.slides {
+        li {
+          img,
+          a {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+    ul.flex-direction-nav {
+      li.flex-nav-prev {
+        width: 25px;
+        height: 25px;
+        
+        a {
+          width: 25px;
+          height: 25px;
+          background: rgba(255, 255, 255, 0.5) url("https://cdn.awsli.com.br/2444/2444356/arquivos/seta_carroussel.svg") center center no-repeat;
+          background-size: contain;
+          left: 5px!important;
+        }
+      }
+      li.flex-nav-next {
+        width: 25px;
+        height: 25px;
+        
+        a {
+          width: 25px;
+          height: 25px;
+          background: rgba(255, 255, 255, 0.5) url("https://cdn.awsli.com.br/2444/2444356/arquivos/seta_carroussel.svg") center center no-repeat;
+          background-size: contain;
+          right: 5px!important;
+        }
+      }
+    }
+  }
+}

@@ -30,6 +30,11 @@
   color: var(--brown)
 }
 .carrinho-checkout {
+  .logo {
+    a {
+      height: 72px;
+    }
+  }
   .logo-mt {
     align-items: center;
   }
@@ -37,7 +42,7 @@
     color: var(--brown);
   }
   .conteiner-principal {
-    padding-top: 200px;
+    padding-top: 150px;
   }
   .campos-pedido {
     .icon-list, .icon-map-marker, .icon-money, .icon-list-alt, .icon-comment {

@@ -21,4 +21,5 @@ const logo = {
 
 document.addEventListener("DOMContentLoaded", () => {
   window.matchMedia("(max-width: 700px)").matches && window.location.pathname.split('/')[1] == 'conta' ? logo.init() : null;
+  window.matchMedia("(max-width: 700px)").matches && window.location.pathname.split('/')[1] == 'carrinho' ? logo.init() : null;
 });

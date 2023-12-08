@@ -1,0 +1,120 @@
+.pagina-busca {
+  .titulo {
+    font-family: var(--main-font);
+    color: var(--brown);
+  }
+  .conteiner-principal {
+    padding-top: 200px;
+    #corpo {
+      .breadcrumbs {
+        display: none;
+      }
+    }
+  }
+  .ordenar-listagem {
+    display: none;
+  }
+  .secao-principal {
+    .coluna {
+      .titulo {
+        color: var(--brown) !important;
+        &:before {
+          display: none !important;
+        }
+      }
+      ul {
+        border: 0;
+        li {
+          border: 0;
+          a {
+            background: transparent !important;
+            label {
+              color: var(--black) !important;
+            }
+          }
+        }
+      }
+      .atributo-comum {
+        ul {
+          a {
+            border-radius: 50% !important;
+            color: var(--black) !important;
+            width: 32px;
+            height: 32px;
+            border: 1px solid var(--grey) !important;
+
+            span {
+              padding: 0;
+            }
+            &:hover {
+              span {
+                color: var(--grey) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #listagemProdutos {
+      z-index: 2;
+      ul {
+        li.listagem-linha {
+          border: 0;
+          > ul.row-fluid {
+            background: transparent!important;
+            li {
+              border: 0 !important;
+              border-color: 0 !important;
+              .listagem-item {
+                border-bottom: 1px solid rgba(202,134,97,.5);
+                .imagem-produto {
+                  position: relative;
+                  padding: 0;
+                  display: block;
+                  img {
+                    &:nth-of-type(1) {
+                      z-index: 2;
+                    }
+                    &:nth-of-type(2) {
+                      position: absolute !important;
+                      z-index: 1;
+                    }
+                  }
+                }
+                &:hover {
+                  .has-zoom {
+                    img {
+                      &:nth-of-type(1) {
+                        opacity: 0;
+                      }
+                      &:nth-of-type(2) {
+                        opacity: 1;
+                      }
+                    }
+                  }
+                }
+                .acoes-produto {
+                  > a {
+                    width: 80%;
+                    border-radius: 6px;
+                  }
+
+                }
+                .produto-avise {
+                  .avise-me-list-btn {
+                    font-family: var(--main-font);
+                    background: var(--brown);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .listagem-linha {
+      border: 0!important;
+    }
+  }
+}
